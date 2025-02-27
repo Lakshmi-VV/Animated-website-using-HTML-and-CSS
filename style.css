@@ -65,6 +65,8 @@ p{
 }
 .btn:hover{
     border-top-right-radius: 20px;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
 }
 .pic{
    position: absolute;
@@ -85,9 +87,17 @@ p.anime{
 .anime{
     opacity: 0;
     transform: translateY(30px);
-    animation: moveup 0.5s linear forwards;     
+    animation: moveup 0.5s ease-in-out forwards;     
 }
 @keyframes moveup{
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(15px);
+    }
     100%{
         opacity: 1;
         transform: translateY(0px);
